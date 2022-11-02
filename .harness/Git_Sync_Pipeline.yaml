@@ -1,0 +1,60 @@
+pipeline:
+  name: Git Sync Pipeline
+  identifier: Git_Sync_Pipeline
+  projectIdentifier: Pankaj_Git_Sync
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: Step 1
+        identifier: Step_1
+        description: ""
+        type: Deployment
+        spec:
+          deploymentType: Kubernetes
+          service:
+            serviceRef: Test_Service
+            serviceInputs:
+              serviceDefinition:
+                type: Kubernetes
+                spec:
+                  variables:
+                    - name: Number_1
+                      type: Number
+                      value: <+input>
+          environment:
+            environmentRef: Test_Environment
+            deployToAll: false
+            infrastructureDefinitions:
+              - identifier: Test_Infra
+                inputs:
+                  identifier: Test_Infra
+                  type: KubernetesDirect
+                  spec:
+                    connectorRef: <+input>
+                    namespace: <+input>
+          execution:
+            steps:
+              - step:
+                  name: Rollout Deployment
+                  identifier: rolloutDeployment
+                  type: K8sRollingDeploy
+                  timeout: 10m
+                  spec:
+                    skipDryRun: false
+                    pruningEnabled: false
+            rollbackSteps:
+              - step:
+                  name: Rollback Rollout Deployment
+                  identifier: rollbackRolloutDeployment
+                  type: K8sRollingRollback
+                  timeout: 10m
+                  spec:
+                    pruningEnabled: false
+        tags: {}
+        failureStrategies:
+          - onFailure:
+              errors:
+                - AllErrors
+              action:
+                type: StageRollback
