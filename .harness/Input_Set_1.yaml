@@ -1,0 +1,30 @@
+inputSet:
+  identifier: "Input_Set_1"
+  name: "Input Set - 1"
+  orgIdentifier: "default"
+  projectIdentifier: "Pankaj_Git_Sync"
+  pipeline:
+    identifier: "Git_Sync_Pipeline"
+    stages:
+    - stage:
+        identifier: "Step_1"
+        type: "Deployment"
+        spec:
+          service:
+            serviceInputs:
+              serviceDefinition:
+                type: "Kubernetes"
+                spec:
+                  variables:
+                  - name: "Number_1"
+                    type: "Number"
+                    value: 1
+          environment:
+            infrastructureDefinitions:
+            - identifier: "Test_Infra"
+              inputs:
+                identifier: "Test_Infra"
+                type: "KubernetesDirect"
+                spec:
+                  connectorRef: "account.manjutestk8s"
+                  namespace: "infra-namespance"
