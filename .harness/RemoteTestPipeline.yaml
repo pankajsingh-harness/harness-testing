@@ -1,0 +1,25 @@
+pipeline:
+  name: Remote-Test-Pipeline
+  identifier: RemoteTestPipeline
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: Stage-1
+        identifier: Stage1
+        template:
+          templateRef: TestTemplate
+          versionLabel: v1
+          templateInputs:
+            type: Deployment
+            spec:
+              service:
+                serviceInputs:
+                  serviceDefinition:
+                    type: Kubernetes
+                    spec:
+                      artifacts:
+                        primary:
+                          primaryArtifactRef: <+input>
+                          sources: <+input>
