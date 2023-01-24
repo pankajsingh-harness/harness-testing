@@ -1,0 +1,27 @@
+inputSet:
+  name: Test-Input-2
+  identifier: TestInput2
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  pipeline:
+    identifier: RemoteTestPipeline
+    stages:
+      - stage:
+          identifier: Stage1
+          template:
+            templateInputs:
+              type: Deployment
+              spec:
+                service:
+                  serviceInputs:
+                    serviceDefinition:
+                      type: Kubernetes
+                      spec:
+                        artifacts:
+                          primary:
+                            primaryArtifactRef: Test-Docker-Registry
+                            sources:
+                              - identifier: Test-Docker-Registry
+                                type: DockerRegistry
+                                spec:
+                                  tag: <+input>.executionInput()
