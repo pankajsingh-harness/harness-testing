@@ -1,0 +1,18 @@
+inputSet:
+  name: Test-Input-CDS-51813
+  identifier: TestInputCDS51813
+  orgIdentifier: default
+  projectIdentifier: CI_Sanity
+  pipeline:
+    identifier: TestCDS51813
+    stages:
+      - stage:
+          identifier: Stage1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    timeout: 1m
