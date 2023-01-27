@@ -1,0 +1,18 @@
+inputSet:
+  name: Test-Input-CDS-51813-Stress
+  identifier: TestInputCDS51813Stress
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  pipeline:
+    identifier: TestCDS51813Stress
+    stages:
+      - stage:
+          identifier: Stage1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    timeout: 1m
