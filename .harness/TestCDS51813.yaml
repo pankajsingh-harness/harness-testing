@@ -1,0 +1,30 @@
+pipeline:
+  name: Test-CDS-51813
+  identifier: TestCDS51813
+  projectIdentifier: CI_Sanity
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: Stage-1
+        identifier: Stage1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: Shell Script_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo Hello World
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: <+input>
+        tags: {}
