@@ -1,0 +1,32 @@
+inputSet:
+  name: test-2
+  identifier: test2
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  pipeline:
+    identifier: Remote
+    stages:
+      - stage:
+          identifier: S1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    timeout: 10m
+      - stage:
+          identifier: S2
+          type: CI
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ArtifactoryUpload_1
+                    type: ArtifactoryUpload
+                    spec:
+                      connectorRef: <+input>
+                      target: <+input>
+                      sourcePath: <+input>
+                    description: <+input>
