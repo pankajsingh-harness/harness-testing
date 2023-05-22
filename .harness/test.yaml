@@ -1,5 +1,6 @@
 inputSet:
   name: test
+  tags: {}
   identifier: test
   orgIdentifier: default
   projectIdentifier: Pankaj
@@ -16,3 +17,17 @@ inputSet:
                     identifier: ShellScript_1
                     type: ShellScript
                     timeout: 10m
+      - stage:
+          identifier: S2
+          type: CI
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ArtifactoryUpload_1
+                    type: ArtifactoryUpload
+                    spec:
+                      connectorRef: account.ramyaart
+                      target: test
+                      sourcePath: test
+                    description: test
