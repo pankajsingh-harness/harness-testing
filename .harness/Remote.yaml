@@ -28,26 +28,3 @@ pipeline:
                     outputVariables: []
                   timeout: <+input>
         tags: {}
-    - stage:
-        name: S2
-        identifier: S2
-        type: CI
-        spec:
-          cloneCodebase: false
-          platform:
-            os: Linux
-            arch: Amd64
-          runtime:
-            type: Cloud
-            spec: {}
-          execution:
-            steps:
-              - step:
-                  type: ArtifactoryUpload
-                  name: ArtifactoryUpload_1
-                  identifier: ArtifactoryUpload_1
-                  spec:
-                    connectorRef: <+input>
-                    target: <+input>
-                    sourcePath: <+input>
-                  description: <+input>
