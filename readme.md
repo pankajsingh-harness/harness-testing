@@ -1,4 +1,3 @@
 Harness testing repo
 
-test
 
