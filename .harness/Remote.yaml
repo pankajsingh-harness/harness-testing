@@ -97,4 +97,4 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
         tags: {}
-  allowStageExecutions: false
+  allowStageExecutions: true
