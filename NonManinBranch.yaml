@@ -48,7 +48,7 @@ pipeline:
                         script: Echo Stage 2
                     environmentVariables: []
                     outputVariables: []
-                  timeout: 10m
+                  timeout: <+input>
     - stage:
         name: S3
         identifier: S3
