@@ -1,5 +1,5 @@
 pipeline:
-  name: Non Manin Branch
+  name: Non Main Branch
   identifier: Non_Manin_Branch
   projectIdentifier: Pankaj
   orgIdentifier: default
