@@ -74,4 +74,27 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
         tags: {}
+    - stage:
+        name: S4
+        identifier: S4
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "Stage 4"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
   allowStageExecutions: true
