@@ -1,0 +1,96 @@
+pipeline:
+  name: Non Manin Branch
+  identifier: Non_Manin_Branch
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: S1
+        identifier: S1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: Echo Stage 1
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+    - stage:
+        name: S2
+        identifier: S2
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: Echo Stage 2
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+    - stage:
+        name: S3
+        identifier: S3
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: Echo Stage 3
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+    - stage:
+        name: S4
+        identifier: S4
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: Echo Stage 4
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
