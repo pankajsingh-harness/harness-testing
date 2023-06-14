@@ -74,24 +74,7 @@ pipeline:
     - stage:
         name: S4
         identifier: S4
-        description: ""
-        type: Custom
-        spec:
-          execution:
-            steps:
-              - step:
-                  type: ShellScript
-                  name: ShellScript_1
-                  identifier: ShellScript_1
-                  spec:
-                    shell: Bash
-                    onDelegate: true
-                    source:
-                      type: Inline
-                      spec:
-                        script: Echo Stage 4
-                    environmentVariables: []
-                    outputVariables: []
-                  timeout: 10m
-        tags: {}
+        template:
+          templateRef: Shell_Script_Template
+          versionLabel: V1
   allowStageExecutions: true
