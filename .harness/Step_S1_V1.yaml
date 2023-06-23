@@ -1,0 +1,20 @@
+template:
+  name: Step S1
+  identifier: Step_S1
+  versionLabel: V1
+  type: Step
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      onDelegate: true
+      source:
+        type: Inline
+        spec:
+          script: echo Step S1
+      environmentVariables: []
+      outputVariables: []
