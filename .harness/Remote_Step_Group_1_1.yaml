@@ -1,0 +1,25 @@
+template:
+  name: Remote Step Group 1
+  identifier: Remote_Step_Group_1
+  versionLabel: "1"
+  type: StepGroup
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stageType: Deployment
+    steps:
+      - step:
+          type: ShellScript
+          name: ShellScript_1
+          identifier: ShellScript_1
+          spec:
+            shell: Bash
+            onDelegate: true
+            source:
+              type: Inline
+              spec:
+                script: echo Hello World
+            environmentVariables: []
+            outputVariables: []
+          timeout: 10m
