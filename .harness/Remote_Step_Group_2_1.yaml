@@ -1,11 +1,15 @@
 template:
-  name: Remote Step Group 2
+  name: Remote Step Group 2 long name test for overlaping
   identifier: Remote_Step_Group_2
   versionLabel: "1"
   type: StepGroup
   projectIdentifier: Pankaj
   orgIdentifier: default
-  tags: {}
+  tags:
+    tag: ""
+    tag2: ""
+    tag3: ""
+    tag4: ""
   spec:
     stageType: Deployment
     steps:
