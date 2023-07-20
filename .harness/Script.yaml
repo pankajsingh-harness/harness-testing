@@ -55,6 +55,35 @@ pipeline:
                           echo User Role: <+trigger.payload.userRole>
                     environmentVariables: []
                     outputVariables: []
+              - step:
+                  name: template
+                  identifier: template
+                  template:
+                    templateRef: TestStep
+                    versionLabel: "1"
+                    templateInputs:
+                      type: ShellScript
+                      spec:
+                        environmentVariables:
+                          - name: V1
+                            type: String
+                            value: <+input>
+                          - name: V3
+                            type: String
+                            value: <+input>
+                          - name: V4
+                            type: String
+                            value: <+input>
+                        outputVariables:
+                          - name: V1
+                            type: String
+                            value: <+input>
+                          - name: V3
+                            type: String
+                            value: <+input>
+                          - name: V4
+                            type: String
+                            value: <+input>
         tags: {}
   allowStageExecutions: true
   variables:
