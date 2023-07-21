@@ -56,34 +56,14 @@ pipeline:
                     environmentVariables: []
                     outputVariables: []
               - step:
-                  name: template
-                  identifier: template
+                  name: Template
+                  identifier: Template
                   template:
-                    templateRef: TestStep
-                    versionLabel: "1"
+                    templateRef: Script_Stage_Template
+                    versionLabel: V1
                     templateInputs:
                       type: ShellScript
-                      spec:
-                        environmentVariables:
-                          - name: V1
-                            type: String
-                            value: <+input>
-                          - name: V3
-                            type: String
-                            value: <+input>
-                          - name: V4
-                            type: String
-                            value: <+input>
-                        outputVariables:
-                          - name: V1
-                            type: String
-                            value: <+input>
-                          - name: V3
-                            type: String
-                            value: <+input>
-                          - name: V4
-                            type: String
-                            value: <+input>
+                      timeout: <+input>
         tags: {}
   allowStageExecutions: true
   variables:
