@@ -1,0 +1,28 @@
+inputSet:
+  name: Test Input Set 2
+  identifier: Test_Input_Set_2
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  pipeline:
+    identifier: Script
+    stages:
+      - stage:
+          identifier: S2
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    timeout: 10m
+                - step:
+                    identifier: Template
+                    template:
+                      templateInputs:
+                        type: ShellScript
+                        timeout: 10m
+    variables:
+      - name: VAR_1
+        type: String
+        value: "1"
