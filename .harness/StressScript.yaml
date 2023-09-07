@@ -1,5 +1,5 @@
 pipeline:
-  name: Stress Script
+  name: Stress Script 2
   identifier: StressScript
   projectIdentifier: Pankaj
   orgIdentifier: default
