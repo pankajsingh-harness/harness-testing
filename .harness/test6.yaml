@@ -1,5 +1,6 @@
 inputSet:
   name: test6
+  tags: {}
   identifier: test6
   orgIdentifier: default
   projectIdentifier: Pankaj
