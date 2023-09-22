@@ -2,7 +2,7 @@ inputSet:
   name: m16
   tags: {}
   identifier: m16
-  description: m16 edited
+  description: m16 local
   orgIdentifier: default
   projectIdentifier: Pankaj
   pipeline:
