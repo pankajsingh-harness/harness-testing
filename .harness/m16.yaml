@@ -1,5 +1,6 @@
 inputSet:
   name: m16
+  tags: {}
   identifier: m16
   orgIdentifier: default
   projectIdentifier: Pankaj
@@ -15,7 +16,7 @@ inputSet:
                 - step:
                     identifier: ShellScript_1
                     type: ShellScript
-                    timeout: 6m
+                    timeout: 8m
                 - step:
                     identifier: Template
                     template:
