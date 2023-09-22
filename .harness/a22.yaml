@@ -1,5 +1,6 @@
 inputSet:
   name: a22
+  tags: {}
   identifier: a22
   orgIdentifier: default
   projectIdentifier: Pankaj
