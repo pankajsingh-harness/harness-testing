@@ -1,5 +1,6 @@
 inputSet:
   name: m16
+  description: m16
   tags: {}
   identifier: m16
   orgIdentifier: default
