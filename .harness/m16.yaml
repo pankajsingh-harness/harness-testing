@@ -22,7 +22,7 @@ inputSet:
                     template:
                       templateInputs:
                         type: ShellScript
-                        timeout: 8m
+                        timeout: 10m
     variables:
       - name: VAR_1
         type: String
