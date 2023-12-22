@@ -1,0 +1,26 @@
+template:
+  name: Shell Script Template
+  type: Stage
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              type: ShellScript
+              name: ShellScript_1
+              identifier: ShellScript_1
+              spec:
+                shell: Bash
+                source:
+                  type: Inline
+                  spec:
+                    script: Echo Stage 4
+                environmentVariables: []
+                outputVariables: []
+                executionTarget: {}
+              timeout: <+input>
+  identifier: Shell_Script_Template
+  versionLabel: V2
