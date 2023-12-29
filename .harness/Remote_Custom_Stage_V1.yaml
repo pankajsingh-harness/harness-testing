@@ -1,0 +1,27 @@
+template:
+  name: Remote Custom Stage
+  identifier: Remote_Custom_Stage
+  versionLabel: V1
+  type: Stage
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: S1
+              identifier: S1
+              template:
+                templateRef: Remote_Jenkins
+                versionLabel: V1
+                templateInputs:
+                  type: JenkinsBuild
+                  spec:
+                    connectorRef: <+input>
+                    consoleLogPollFrequency: <+input>
+                    jobName: <+input>
+                    jobParameter: <+input>
+                  timeout: <+input>
