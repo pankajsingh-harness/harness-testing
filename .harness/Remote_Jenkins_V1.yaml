@@ -1,0 +1,18 @@
+template:
+  name: Remote Jenkins
+  identifier: Remote_Jenkins
+  versionLabel: V1
+  type: Step
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: JenkinsBuild
+    spec:
+      connectorRef: <+input>
+      consoleLogPollFrequency: <+input>
+      jobName: <+input>
+      jobParameter: <+input>
+      unstableStatusAsSuccess: false
+      useConnectorUrlForJobExecution: false
+    timeout: <+input>
