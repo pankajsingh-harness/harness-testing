@@ -1,0 +1,26 @@
+template:
+  name: Remote Shell Step Stage
+  identifier: Remote_Shell_Step_Stage
+  type: Stage
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: S1
+              identifier: S1
+              template:
+                templateRef: Shell_Connector
+                versionLabel: "1"
+                templateInputs:
+                  type: ShellScript
+                  spec:
+                    executionTarget:
+                      connectorRef: <+input>
+                      host: <+input>
+                      workingDirectory: /root
+  versionLabel: V1
