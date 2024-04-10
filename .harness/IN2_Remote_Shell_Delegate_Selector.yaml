@@ -1,0 +1,20 @@
+inputSet:
+  name: IN2 Remote Shell Delegate Selector
+  identifier: IN2_Remote_Shell_Delegate_Selector
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  pipeline:
+    identifier: Remote_Shell_Delegate_Selector
+    stages:
+      - stage:
+          identifier: S1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    spec:
+                      delegateSelectors: <+input>
+                    timeout: 10m
