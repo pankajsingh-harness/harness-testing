@@ -1,5 +1,6 @@
 inputSet:
   name: IN2 Remote Shell Delegate Selector
+  tags: {}
   identifier: IN2_Remote_Shell_Delegate_Selector
   orgIdentifier: default
   projectIdentifier: Pankaj
@@ -16,5 +17,6 @@ inputSet:
                     identifier: ShellScript_1
                     type: ShellScript
                     spec:
-                      delegateSelectors: <+input>
-                    timeout: 10m
+                      delegateSelectors:
+                        - <+input>
+                    timeout: 5mm
