@@ -24,7 +24,7 @@ pipeline:
                         source:
                           type: Inline
                           spec:
-                            script: echo "Stage 11"
+                            script: echo "Main Stage 11"
                         environmentVariables: []
                         outputVariables: []
                       timeout: <+input>
