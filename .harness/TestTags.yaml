@@ -16,14 +16,16 @@ pipeline:
               - step:
                   type: ShellScript
                   name: ShellScript_1
-                  identifier: ShellScript_1xcx
+                  identifier: ShellScript_1
                   spec:
                     shell: Bash
                     executionTarget: {}
                     source:
                       type: Inline
                       spec:
-                        script: echo 'hi'
+                        script: |-
+                          echo S1
+                          exit 1
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
