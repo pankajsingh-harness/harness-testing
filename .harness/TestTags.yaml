@@ -1,0 +1,31 @@
+pipeline:
+  name: TestTags
+  identifier: TestTags
+  projectIdentifier: AmitTest
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  "":
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1xcx
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo 'hi'
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
