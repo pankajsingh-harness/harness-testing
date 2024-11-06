@@ -1,8 +1,8 @@
 pipeline:
   name: TestTags
   identifier: TestTags
-  projectIdentifier: AmitTest
-  orgIdentifier: Pipelines_NonK8s_Org_NG
+  projectIdentifier: Pankaj
+  orgIdentifier: default
   tags: {}
   stages:
     - stage:
