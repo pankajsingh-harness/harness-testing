@@ -1,0 +1,5 @@
+service:
+  name: remote-test-service
+  identifier: remotetestservice
+  orgIdentifier: default
+  projectIdentifier: Pankaj
