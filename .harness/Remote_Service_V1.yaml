@@ -1,0 +1,64 @@
+template:
+  name: Remote Service
+  type: Stage
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  spec:
+    type: Deployment
+    spec:
+      deploymentType: Kubernetes
+      service:
+        serviceRef: remotetestservice
+        serviceInputs:
+          serviceDefinition:
+            type: Kubernetes
+            spec:
+              artifacts:
+                primary:
+                  primaryArtifactRef: <+input>
+                  sources: <+input>
+              manifests:
+                - manifest:
+                    identifier: test
+                    type: K8sManifest
+                    spec:
+                      store:
+                        type: Git
+                        spec:
+                          repoName: <+input>.allowedValues(a-repo,b-repo)
+                          branch: <+input>.allowedValues(a-branch,b-branch)
+              variables:
+                - name: Var1
+                  type: String
+                  value: <+input>
+      environment:
+        environmentRef: <+input>
+        deployToAll: false
+        environmentInputs: <+input>
+        serviceOverrideInputs: <+input>
+        infrastructureDefinitions: <+input>
+      execution:
+        steps:
+          - step:
+              type: ShellScript
+              name: ShellScript_1
+              identifier: ShellScript_1
+              spec:
+                shell: Bash
+                executionTarget: {}
+                source:
+                  type: Inline
+                  spec:
+                    script: echo S1
+                environmentVariables: []
+                outputVariables: []
+              timeout: 10m
+        rollbackSteps: []
+    failureStrategies:
+      - onFailure:
+          errors:
+            - AllErrors
+          action:
+            type: StageRollback
+  identifier: Remote_Service
+  versionLabel: V1
