@@ -11,7 +11,7 @@ pipeline:
         spec:
           deploymentType: Kubernetes
           service:
-            serviceRef: testservice
+            serviceRef: remotetestservice
             serviceInputs:
               serviceDefinition:
                 type: Kubernetes
@@ -28,8 +28,8 @@ pipeline:
                           store:
                             type: Git
                             spec:
-                              repoName: "<+input>.allowedValues(a-repo,b-repo)"
-                              branch: "<+input>.allowedValues(a-branch,b-branch)"
+                              repoName: <+input>.allowedValues(a-repo,b-repo)
+                              branch: <+input>.allowedValues(a-branch,b-branch)
                   variables:
                     - name: Var1
                       type: String
@@ -71,4 +71,4 @@ pipeline:
       required: true
       value: <+input>
   identifier: Remote_Pipeline_With_Fixed_Service
-  name: 'Remote Pipeline With Fixed Service '
+  name: "Remote Pipeline With Fixed Service "
