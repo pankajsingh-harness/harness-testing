@@ -1,5 +1,5 @@
 template:
-  name: S1
+  name: S1 Long Name for testing
   identifier: S1
   versionLabel: V1
   type: Step
