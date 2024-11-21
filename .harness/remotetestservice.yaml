@@ -156,4 +156,14 @@ service:
           description: Test
           required: true
           value: <+input>
+        - name: Num1
+          type: Number
+          description: Number Description
+          required: true
+          value: <+input>
+        - name: Sec1
+          type: Secret
+          description: Secret Description
+          required: false
+          value: <+input>
     type: Kubernetes
