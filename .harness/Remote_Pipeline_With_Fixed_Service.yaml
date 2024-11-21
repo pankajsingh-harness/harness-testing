@@ -34,6 +34,12 @@ pipeline:
                     - name: Var1
                       type: String
                       value: <+input>
+                    - name: Num1
+                      type: Number
+                      value: <+input>
+                    - name: Sec1
+                      type: Secret
+                      value: <+input>
           environment:
             environmentRef: <+input>
             deployToAll: false
