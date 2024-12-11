@@ -1,0 +1,20 @@
+inputSet:
+  name: t
+  identifier: t
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  pipeline:
+    identifier: Display_full_branch_name
+    stages:
+      - stage:
+          identifier: S1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: S1
+                    template:
+                      templateInputs:
+                        type: ShellScript
+                        timeout: <+input>
