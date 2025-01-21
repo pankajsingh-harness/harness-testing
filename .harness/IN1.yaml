@@ -1,0 +1,26 @@
+inputSet:
+  name: IN1
+  identifier: IN1
+  orgIdentifier: default
+  projectIdentifier: Pankaj
+  pipeline:
+    identifier: Webhook_Custom_Trigger
+    stages:
+      - stage:
+          identifier: S1
+          type: Deployment
+          spec:
+            service:
+              serviceInputs:
+                serviceDefinition:
+                  type: Kubernetes
+                  spec:
+                    artifacts:
+                      primary:
+                        primaryArtifactRef: Docker_Registry
+                        sources:
+                          - identifier: Docker_Registry
+                            type: DockerRegistry
+                            spec:
+                              tag: Vk1FmKaqshG
+                              digest: sha256:ef3a7c18570c7b8b9a13e7fda15be731487ff3bd820ab3d7274f362a68ff6b32
