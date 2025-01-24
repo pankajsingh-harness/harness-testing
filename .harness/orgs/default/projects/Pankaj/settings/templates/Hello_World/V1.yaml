@@ -1,6 +1,6 @@
 template:
-  name: Test Hello World
-  identifier: Test_Hello_World
+  name: Hello World
+  identifier: Hello_World
   type: Step
   versionLabel: V1
   projectIdentifier: Pankaj
