@@ -1,0 +1,21 @@
+template:
+  name: Hello World 2
+  identifier: Hello_World_2
+  type: Step
+  versionLabel: V1
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: <+input>
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: echo Hello World
+      environmentVariables: []
+      outputVariables: []
