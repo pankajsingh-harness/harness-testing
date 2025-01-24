@@ -1,0 +1,20 @@
+template:
+  name: Hello World 3
+  identifier: Hello_World_3
+  versionLabel: V1
+  projectIdentifier: Pankaj
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: <+input>
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: echo Hello World
+      environmentVariables: []
+      outputVariables: []
