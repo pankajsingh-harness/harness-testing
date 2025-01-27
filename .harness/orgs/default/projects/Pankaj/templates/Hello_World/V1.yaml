@@ -1,21 +1,20 @@
 template:
-  name: Hello World 2
-  identifier: Hello_World_2
-  type: Step
+  name: Hello World
+  identifier: Hello_World
   versionLabel: V1
   projectIdentifier: Pankaj
   orgIdentifier: default
   tags: {}
+  type: Step
   spec:
-    timeout: <+input>
+    timeout: 10m
     type: ShellScript
     spec:
       shell: Bash
-      executionTarget: {}
-      delegateSelectors: []
+      onDelegate: true
       source:
         type: Inline
         spec:
-          script: echo Hello World
+          script: echo Hello World Test
       environmentVariables: []
       outputVariables: []
